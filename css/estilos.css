@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/*-----------------------------------------
+1. tipografia del sitio
+-----------------------------------------*/
+html {
+  font-size: 12px; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: #696969; }
+
+/*-----------------------------------------
+2.color de fondo principal
+-----------------------------------------*/
+.bg-primary {
+  background-color: #337ab7 !important; }
+
+/*-----------------------------------------
+3.color de text principal
+-----------------------------------------*/
+.text-primary {
+  color: #337ab7 !important; }
+
+/*-----------------------------------------
+4.Estilos generales de botones
+-----------------------------------------*/
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  padding: 1rem 2rem; }
+
+.btn:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.31); }
+
+.btn:before {
+  content: '\f368';
+  font-family: 'FontAwesome';
+  position: relative;
+  left: .5rem;
+  transition: all .2s ease; }
+
+.btn:hover:after {
+  left: 1rem;
+  transform: rotateZ(-360deg); }
+
+/*-----------------------------------------
+5.Estilos boton principal ".btn-primary"
+-----------------------------------------*/
+.btn-primary {
+  background-color: #337ab7 !important;
+  border-color: #285f8f !important; }
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #285f8f !important; }
+
+.btn-primary:active {
+  background-color: #1d4567 !important;
+  border-color: #122a3f !important; }
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(51, 122, 183, 0.5) !important; }
+
+/*-----------------------------------------
+6.seccion barra de navegacion
+-----------------------------------------*/
+.btn-buscar {
+  padding: .6rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer; }
+
+/*-----------------------------------------
+Medias queries
+-----------------------------------------*/
+@media (min-width: 768px) {
+  .btn-buscar {
+    padding: 0;
+    font-size: 1.4rem;
+    border-color: transparent; } }
+/*-----------------------------------------
+ Estilos Mega menu
+-----------------------------------------*/
+.navbar .container {
+  position: relative; }
+
+.mega-menu {
+  position: static; }
+
+.mega-menu .dropdown-menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: auto; }
+
+/*-----------------------------------------
+Estilos Dropdown
+-----------------------------------------*/
+.dropdown-menu a i {
+  font-size: 0.85rem;
+  margin-right: .5rem; }
+
+.dropdown-menu {
+  border: 1px solid #337ab7;
+  border-top-width: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); }
+
+/*-----------------------------------------
+7.Seccion buscador caja de busqueda
+-----------------------------------------*/
+#buscador-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(243, 239, 239, 0.61);
+  z-index: 1000;
+  display: none; }
+
+.btn-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #337ab7;
+  font-size: 3rem; }
+
+#nombre {
+  height: auto;
+  border-radius: 3rem 0 0 3rem;
+  font-size: 1.5rem;
+  padding: 1rem; }
+
+#buscar:after {
+  content: ''; }
+
+#buscar {
+  border-radius: 0 3rem 3rem 0;
+  font-size: 1.5rem; }
+
+/*---------------------------------------------
+8. ESTILOS PRESENTACIÓN "#presentacion"
+----------------------------------------------*/
+#presentacion {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.bienvenidos {
+  flex-grow: 1; }
+
+/*------------------------------------------------------------------
+9.Bienvenidos
+------------------------------------------------------------------*/
+.bienvenidos {
+  background: url("../images/fondo-bienvenidos.png") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.bienvenidos:before {
+  content: "";
+  background: rgba(9, 9, 9, 0.55);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.bienvenidos .btn {
+  width: 70%;
+  margin-bottom: .5rem;
+  text-transform: uppercase; }
+
+.bienvenidos {
+  background: url("../images/fondo-bienvenidos-md.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: left; }
+
+.bienvenidos .btn {
+  width: auto;
+  margin-bottom: 0;
+  margin-right: 1rem; }
+
+/*------------------------------------------------------------------
+10.ESTILOS SEPARADOR ".separador-titulos"
+------------------------------------------------------------------*/
+.separador-titulos {
+  display: inline-block;
+  margin-top: 2rem;
+  height: 4px;
+  width: 80px;
+  background: #337ab7; }
+
+@media (min-width: 990px) {
+  html {
+    font-size: 16px; } }
+/*------------------------------------------------------------------
+11.ESTILOS PARA PROYECTOS "#PROYECTOS"
+------------------------------------------------------------------*/
+.proyecto {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem; }
+
+.proyecto .mascara {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(10, 8, 38, 0.5882352941);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  opacity: 0;
+  transition: all .4s ease;
+  z-index: 10; }
+
+.proyecto .mascara h3,
+.proyecto .mascara h3 {
+  position: relative;
+  top: -2rem;
+  transition: all .3s ease;
+  /* Correccion para IE11+*/
+  width: 100%; }
+
+.proyecto .mascara .btn {
+  position: relative;
+  top: 2rem;
+  transition: all .3s ease; }
+
+.proyecto img {
+  width: 100%; }
+
+/* Estado HOVER de cada proyecto*/
+.proyecto:hover .mascara {
+  opacity: 1; }
+
+.proyecto:hover .mascara h3,
+.proyecto:hover .mascara p,
+.proyecto:hover .mascara .btn {
+  top: 0; }
+
+.proyecto:hover img {
+  transform: scale(1.3);
+  transition: all .3s ease; }
+
+/*# sourceMappingURL=estilos.css.map */
